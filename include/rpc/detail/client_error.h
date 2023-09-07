@@ -28,7 +28,7 @@ public:
 
     client_error(code c, const std::string &msg);
 
-    const char *what() const noexcept;
+    const char *what() const noexcept override;
 
 private:
     std::string what_;

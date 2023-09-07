@@ -53,7 +53,7 @@ private:
 class system_error : public std::system_error {
 public:
     using std::system_error::system_error;
-    const char* what() const noexcept;
+    const char* what() const noexcept override;
 };
 
 } /* rpc */

@@ -105,8 +105,6 @@ public:
 	//! \brief Returns all binded names
     //!
     //! This function returns a list of all names which functors are binded to
-    //!
-    //! \param name The name of the functor.
     std::vector<std::string> names() const {
         return disp_->names();
     }

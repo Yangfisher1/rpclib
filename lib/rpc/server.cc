@@ -55,7 +55,7 @@ struct server::impl {
     void start_accept() {
         acceptor_.async_accept(socket_, [this](std::error_code ec) {
             if (!ec) {
-                auto ep = socket_.remote_endpoint();
+                [[maybe_unused]] auto ep = socket_.remote_endpoint();
                 LOG_INFO("Accepted connection from {}:{}", ep.address(),
                          ep.port());
                 auto s = std::make_shared<server_session>(
