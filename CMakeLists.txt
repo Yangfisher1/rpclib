@@ -35,7 +35,7 @@ option(RPCLIB_MSVC_STATIC_RUNTIME
 #
 set(RPCLIB_DEFAULT_PORT 8080 
   CACHE STRING "Default port used for running tests and examples")
-set(RPCLIB_DEFAULT_BUFFER_SIZE "1024 << 10" 
+set(RPCLIB_DEFAULT_BUFFER_SIZE "1024 << 14" # support 16M block size in chfs
   CACHE STRING "Default buffer size")
 set(RPCLIB_CXX_STANDARD 17 CACHE STRING 
   "C++ version used to build rpclib (Currently: 17)")
